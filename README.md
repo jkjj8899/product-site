@@ -14,9 +14,11 @@
 | 图标 | 产品名称 | 简介 | 访问页面 |
 |------|----------|------|----------|
 <!-- PRODUCT_LIST_START -->
-| ![测试机器人](https://via.placeholder.com/64) | **测试机器人** | 用于测试自动创建仓库的机器人项目 | [访问页面](https://jkjj8899.github.io/test-bot/) |
-| ![测试机器人](https://via.placeholder.com/64) | **测试机器人** | 这是一个测试项目 | [访问页面](https://jkjj8899.github.io/test-bot1/) |
-| ![测试机器人](https://via.placeholder.com/64) | **测试机器人** | 测试是否到总仓库 | [访问页面](https://jkjj8899.github.io/test-bot2/) |
+| 图标 | 产品名称 | 简介 | 访问页面 |
+|------|----------|------|----------|
+| <img src="https://via.placeholder.com/64" width="48" /> | **测试机器人** | 用于测试自动创建仓库的机器人项目 | [访问页面](https://jkjj8899.github.io/test-bot/) |
+| <img src="https://via.placeholder.com/64" width="48" /> | **测试机器人** | 这是一个测试项目 | [访问页面](https://jkjj8899.github.io/test-bot1/) |
+| <img src="https://via.placeholder.com/64" width="48" /> | **测试机器人** | 测试是否到总仓库 | [访问页面](https://jkjj8899.github.io/test-bot2/) |
 <!-- PRODUCT_LIST_END -->
 
 ---

@@ -1,55 +1,48 @@
-
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-  <meta charset="UTF-8" />
-  <title>七点科技 · 产品展示</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>七点科技 · 产品中心</title>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; }
+    .card {
+      width: 240px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1rem;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 4px;
+    }
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  </style>
 </head>
 <body>
-  <header>
-  <nav>
-    <div class="logo">七点科技</div>
-    <ul>
-      <li><a href="#">产品列表</a></li>
-      <li><a href="#">关于我们</a></li>
-      <li><a href="#">联系方式</a></li>
-    </ul>
-  </nav>
-</header>
+  <h1>七点科技 · 产品中心</h1>
+  <p>欢迎访问我们的产品展示平台，每个产品为独立仓库，支持自动扩展与 SEO 收录。</p>
 
-  <main>
-    <input type="search" class="search-bar" placeholder="搜索产品..." oninput="filterProducts(this.value)">
-    <div id="product-grid" class="product-grid"></div>
-  </main>
-  <footer>
-  <p>© 2025 七点科技 | 本页面由系统自动构建</p>
-</footer>
+  <h2>📦 产品列表</h2>
+  <div class="list" id="product-list">加载中...</div>
 
   <script>
-    function renderProducts(products) {
-  const container = document.getElementById('product-grid');
-  container.innerHTML = products.map(p => `
-    <div class="card">
-      <img src="${p.icon}" alt="${p.name}">
-      <div class="card-content">
-        <h3>${p.name}</h3>
-        <p>${p.description}</p>
-        <a href="${p.link}" target="_blank">访问产品</a>
-      </div>
-    </div>
-  `).join('');
-}
-
-    const products = [{"name":"ceshi1","description":"测试","icon":"https://raw.githubusercontent.com/jkjj8899/product-site/main/assets/ceshi1.png","slug":"ceshi1","link":"https://jkjj8899.github.io/ceshi1/"}];
-    renderProducts(products);
-    function filterProducts(query) {
-      const filtered = products.filter(p =>
-        p.name.includes(query) || p.description.includes(query)
-      );
-      renderProducts(filtered);
-    }
+    fetch('products.json')
+      .then(res => res.json())
+      .then(products => {
+        const container = document.getElementById('product-list');
+        container.innerHTML = products.map(p => `
+          <div class="card">
+            <img src="${p.icon}" alt="${p.name}">
+            <h3>${p.name}</h3>
+            <p>${p.description}</p>
+            <a href="${p.link}" target="_blank">访问产品页面</a>
+          </div>
+        `).join('');
+      });
   </script>
 </body>
 </html>

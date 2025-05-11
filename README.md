@@ -32,4 +32,4 @@
 ## 📬 联系我们
 
 - 官网地址：[https://3xex.com](https://3xex.com)
-- Telegram：[t.me/你的频道](https://t.me/xxx)
+- Telegram：[t.me/你的频道](https://t.me/sy89899)
